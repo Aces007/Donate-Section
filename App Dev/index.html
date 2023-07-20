@@ -45,7 +45,7 @@
         </div>
 
         <form action="upload.php" method="POST">
-            <input type="file" multiple>
+            <input type="image" multiple>
             <p>Drag your files here or click in this area.</p>
             <button type="submit">Upload</button>
         </form>
@@ -54,6 +54,12 @@
             <input type="text" placeholder="Product" class="prod">
             <textarea cols="30" rows="9" placeholder="Description of product" class="desc"></textarea>
             <input type="text" placeholder="Category" class="categ">
+            <select name="condition" class="condition">
+                <option selected="true" disabled="disabled">Condition</option>
+                <option value="New">New</option>
+                <option value="Used">Used</option>
+                <option value="Refurbished">Refurbished</option>
+            <select>
         </div>
 
     </section>
