@@ -1,0 +1,419 @@
+body{
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    /****-webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    /**background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);**/
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+
+
+/* HEADER */
+.header
+{
+    width: 100%;
+    height: 130px;
+    flex-shrink: 0;
+    background: linear-gradient(178deg, #F5C096 0%, #FA9472 44.79%, #FEAA79 94.27%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    margin-bottom: 0%;
+    z-index: 9988;
+}
+
+.header_content
+{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    z-index: 9999;
+    display: flex;
+}
+
+.header_content h1
+{
+    font-size: 500px;
+    color: #333333;
+    font-family: Hind;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 28px;
+    left: 70px;
+}
+
+.container 
+{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 0%;
+}
+
+
+
+
+/* Previous Page Arrow */
+.arrow {
+    width: 30px;
+    height: 30px;
+    margin-top: 29px;
+    margin-left: 22px;
+    display: inline-block;
+    position: relative;
+}
+
+.arrow::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    top: 80%;
+    left: 55%;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px 2px 0 0;
+    position: absolute;
+    transform-origin: 50% 50%;
+}
+
+.left::before { 
+    transform: rotate(-135deg);
+    margin: -15px 0 0 -10px;
+}
+
+.arrow::after {
+    content: '';
+    display: block;
+    top: 50%;
+    left: 65%;
+    border-style: solid;
+    border-color: #000;
+    position: absolute;
+    transform-origin: 50% 50%;
+}
+
+.left::after { 
+    width: 20px;
+    height: 0;
+    border-width: 2px 0 0 0;
+    transform: translate(-14px, -1px);
+}
+
+.circle {
+    background: #FFFF;
+    border-radius: 50px;
+}
+
+
+
+
+/* Post Button */
+.post_but{
+    background-color: #D9D9D9;
+    padding: 4px;
+    width: 50px;
+    height: 35px;
+    border: none;
+    border-radius: 7px;
+    color: #6D6D6D;
+    font-weight: 800;
+    position: relative;
+    left: 380px;
+    top: -35px;
+}
+
+
+
+/* Main Content */
+.client_name{
+    position: relative;
+    top: -240px;
+    left: 75px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #000;
+}
+
+.client_label{
+    position: relative;
+    top: -210px;
+    left: -210px;
+    font-size: 15px;
+    background-color: #EF2E33;
+    border-radius: 15px;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.client_label p {
+    position: relative;
+    top: -15px;
+}
+
+
+img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    left: -360px;
+    top: -225px;
+}
+
+
+
+/* Uploading Pics */
+form{
+    position: absolute;
+    top: 50%;
+    left: 270px;
+    margin-top: -150px;
+    margin-left: -250px;
+    width: 400px;
+    height: 200px;
+    border: 4px dashed black;
+}
+form p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: black;
+    font-family: Arial;
+}
+form input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+}
+form button{
+    position: relative;
+    margin: 0;
+    color: #fff;
+    background: #16a085;
+    border: none;
+    width: 408px;
+    height: 35px;
+    left: -0.5px;
+    margin-top: -20px;
+    margin-left: -4px;
+    border-radius: 4px;
+    border-bottom: 4px solid #117A60;
+    transition: all .2s ease;
+    outline: none;
+}
+form button:hover{
+    background: #149174;
+    color: #0C5645;
+}
+form button:active{
+    border:0;
+}
+
+
+
+/* Input Fields */
+.input_fields{
+    position: relative;
+    top: -270px;
+    left: 20px;
+}
+
+.input_fields .prod{
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 40px;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.input_fields .desc{
+    position: relative;
+    top: 10px;
+    width: 400px;
+    background-color: white;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 15px;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.input_fields .categ{
+    position: relative;
+    top: 15px;
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 40px;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+/* nav bar */
+
+nav 
+{
+    background: linear-gradient(178deg, #F5C096 0%, #FA9472 44.79%, #FEAA79 94.27%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 62px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 900px;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+}
+  
+nav ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav li 
+{
+    margin-right: 10px;
+}
+  
+nav ul li
+{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 10px;
+}
+
+nav ul li a 
+{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    font-size: 14px;
+    align-items: center;
+    color: #081D22;
+}
+
+.icon
+{
+    width: 10px;
+    position:relative;
+    display: inline-block;
+    color: #081D22;
+}
+
+
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+#deviceready.ready .event.listening { display: none; }
+#deviceready.ready .event.received { display: block; }
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: #F5F1EE;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+
+        <!-- Used Dimensions : 450 x 810 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://*.fontawesome.com/  https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://kit.fontawesome.com/120399c45c.js" crossorigin="anonymous"></script>
+        <title> Decluttering Application </title>
+    </head>
+
+
+    <section id="Donate"> 
+        <div class="header">
+
+            <div>
+                <i class="arrow circle left"></i>
+            </div>
+
+            <div class="header_content"> 
+                <h1> Donate </h1> 
+            </div>
+
+            <div>
+                <button class="post_but">
+                    Post
+                </button>
+            </div>
+
+        </div>
+        
+        <div class="donate container">
+                <div class="client_name"><p> Ace Lawrence Z. Clavano </p></div>
+                <div class="client_label"><p> Donor </p></div>
+                <img src="images/no_face.png" alt="Avatar">
+        </div>
+
+        <form action="upload.php" method="POST">
+            <input type="file" multiple>
+            <p>Drag your files here or click in this area.</p>
+            <button type="submit">Upload</button>
+        </form>
+
+        <div class="input_fields">
+            <input type="text" placeholder="Product" class="prod">
+            <textarea cols="30" rows="9" placeholder="Description of product" class="desc"></textarea>
+            <input type="text" placeholder="Category" class="categ">
+        </div>
+
+    </section>
+
+
+
+    <div class="nav_bar">
+        <nav> 
+            <ul>
+    
+                <li> 
+                    <a href="#">
+                        <div class="icon"> <i class="fa-solid fa-hand-back-fist"  aria-hidden="true"> </i> </div>
+                        <div class="name" data-text="Message"> Collect </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Donate">
+                        <div class="icon"> <i class="fas fa-hand-holding"  aria-hidden="true"> </i> </div>
+                        <div class="name" data-text="Donate"> Donate </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Request">
+                        <div class="icon"> <i class="fa-solid fa-hands-praying"  aria-hidden="true"> </i> </div>
+                        <div class="name" data-text="Request"> Request </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Message">
+                        <div class="icon"> <i class="fa-solid fa-comment-dots"  aria-hidden="true"> </i> </div>
+                        <div class="name" data-text="Message"> Message </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Profile">
+                        <div class="icon"> <i class="fa-solid fa-user"  aria-hidden="true"> </i> </div>
+                        <div class="name" data-text="Profile"> Profile </div>
+                    </a>
+                </li>
+    
+            </ul>
+        </nav>
+    </div>
+</html>
